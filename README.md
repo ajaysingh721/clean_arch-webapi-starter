@@ -13,42 +13,28 @@ This repository hosts a .NET 9-style backend and a Next.js frontend in a single 
 ```text
 clean_arch-webapi-starter/
 ├─ .github/
-│  ├─ copilot-instructions.md
-│  └─ workflows/
-│     └─ deploy-iis.yml
 ├─ .vscode/
-│  └─ tasks.json
 ├─ backend/
-│  ├─ CleanArchWeb.sln
+│  ├─ Solution.sln
 │  ├─ src/
-│  │  ├─ Services/
-│  │  │  ├─ CleanArchWeb.Api/
-│  │  │  │  ├─ Controllers/
-│  │  │  │  ├─ Properties/
-│  │  │  │  │  ├─ launchSettings.json
-│  │  │  │  │  └─ PublishProfiles/
-│  │  │  │  │     └─ Folder.pubxml
-│  │  │  │  └─ Program.cs
-│  │  │  ├─ CleanArchWeb.Application/
-│  │  │  ├─ CleanArchWeb.Domain/
-│  │  │  └─ CleanArchWeb.Infrastructure/
-│  │  └─ BackgroundServices/
+│  │  ├─ BackgroundServices/
+│  │  └─ Services/
+│  │     ├─ Example.Api/
+│  │     ├─ Example.Application/
+│  │     ├─ Example.Domain/
+│  │     └─ Example.Infrastructure/
 │  └─ tests/
-│     └─ CleanArchWeb.Api.Tests/
+│     ├─ Example.Api.UnitTests/
+│     └─ Example.Api.IntegrationTests/
 ├─ frontend/
 │  ├─ package.json
-│  ├─ components.json
-│  ├─ tailwind.config.ts
+│  ├─ public/
 │  └─ src/
 │     ├─ app/
-│     │  ├─ page.tsx
-│     │  └─ globals.css
+│     ├─ components/
 │     └─ lib/
-│        └─ utils.ts
 ├─ scripts/
-│  └─ publish-iis.ps1
-├─ docs/
-└─ README.md
+└─ docs/
 ```
 
 ## Backend
