@@ -39,3 +39,57 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ------------------------------
+# .NET / C# build artifacts
+# ------------------------------
+**/bin/
+**/obj/
+*.user
+*.suo
+.vs/
+TestResults/
+*.trx
+*.cache
+*.mdb
+*.pdb
+*.ldf
+*.mdf
+*.sqlite
+*.db
+*.pubxml.user
+
+# Publish output (optional local artifacts)
+publish/
+
+# ------------------------------
+# Frontend tooling caches
+# ------------------------------
+.eslintcache
+.stylelintcache
+.turbo/
+.swc/
+
+# Logs (general)
+*.log
+
+# Node locks (keep one authoritative lock if desired)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+# Uncomment one below to force exclude others if policy requires
+# !frontend/package-lock.json
+# !frontend/yarn.lock
+# !frontend/pnpm-lock.yaml
+
+# Generated coverage reports (backend or other tooling)
+**/coverage*/
+
+# IDE/editor
+.idea/
+.fleet/
+Thumbs.db
+
+# Misc local environment overrides
+*.local.json
+

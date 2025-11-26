@@ -19,6 +19,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchWeb.Api.Tests", "tests\CleanArchWeb.Api.Tests\CleanArchWeb.Api.Tests.csproj", "{F12F37F3-A480-4CFA-875A-AA8FAAC3141F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchWeb.Api.IntegrationTests", "tests\CleanArchWeb.Api.IntegrationTests\CleanArchWeb.Api.IntegrationTests.csproj", "{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,11 +91,24 @@ Global
 		{F12F37F3-A480-4CFA-875A-AA8FAAC3141F}.Release|x64.Build.0 = Release|Any CPU
 		{F12F37F3-A480-4CFA-875A-AA8FAAC3141F}.Release|x86.ActiveCfg = Release|Any CPU
 		{F12F37F3-A480-4CFA-875A-AA8FAAC3141F}.Release|x86.Build.0 = Release|Any CPU
+		{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11}.Debug|x64.Build.0 = Debug|Any CPU
+		{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11}.Debug|x86.Build.0 = Debug|Any CPU
+		{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11}.Release|x64.ActiveCfg = Release|Any CPU
+		{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11}.Release|x64.Build.0 = Release|Any CPU
+		{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11}.Release|x86.ActiveCfg = Release|Any CPU
+		{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F12F37F3-A480-4CFA-875A-AA8FAAC3141F} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{A2E8D9F4-4AF9-4D2A-9E5F-4A6A9F9E4C11} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 	EndGlobalSection
 EndGlobal

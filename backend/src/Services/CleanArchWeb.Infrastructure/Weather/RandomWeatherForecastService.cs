@@ -11,20 +11,21 @@ public class RandomWeatherForecastService : IWeatherForecastService
         "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     ];
 
-    public IReadOnlyList<WeatherForecast> GetForecasts()
+    public Task<IReadOnlyList<WeatherForecast>> GetForecastsAsync(CancellationToken cancellationToken = default)
     {
+        // Simulate fast in-memory generation; cancellation token considered for future extensibility.
+        cancellationToken.ThrowIfCancellationRequested();
+
         var startDate = DateOnly.FromDateTime(DateTime.UtcNow);
         var random = new Random();
 
         var items = Enumerable.Range(1, 5)
-            .Select(index => new WeatherForecast
-            {
-                Date = startDate.AddDays(index),
-                TemperatureC = random.Next(-20, 55),
-                Summary = Summaries[random.Next(Summaries.Length)]
-            })
+            .Select(index => WeatherForecast.Create(
+                startDate.AddDays(index),
+                random.Next(-20, 55),
+                Summaries[random.Next(Summaries.Length)]))
             .ToList();
 
-        return items;
+        return Task.FromResult<IReadOnlyList<WeatherForecast>>(items);
     }
 }

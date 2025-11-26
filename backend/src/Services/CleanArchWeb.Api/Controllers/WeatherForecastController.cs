@@ -8,9 +8,10 @@ namespace CleanArchWeb.Api.Controllers;
 public class WeatherForecastController(IWeatherForecastService weatherService) : ControllerBase
 {
     [HttpGet]
-    public IActionResult Get()
+    public async Task<IActionResult> Get(CancellationToken cancellationToken)
     {
-        var forecasts = weatherService.GetForecasts();
-        return Ok(forecasts);
+        var forecasts = await weatherService.GetForecastsAsync(cancellationToken);
+        var dtos = forecasts.Select(f => f.ToDto());
+        return Ok(dtos);
     }
 }
