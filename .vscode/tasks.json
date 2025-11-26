@@ -6,6 +6,7 @@
       "type": "shell",
       "command": "dotnet",
       "args": [
+        "watch",
         "run",
         "--project",
         "backend/src/Services/CleanArchWeb.Api/CleanArchWeb.Api.csproj"

@@ -1,2 +1,1 @@
-// Integration test moved to CleanArchWeb.Api.IntegrationTests project.
-// This file intentionally left blank.
+// No controller tests: Minimal API is used. File intentionally kept blank.
