@@ -1,66 +1,65 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
-export default function Home() {
+async function getWeather() {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:5277"}/api/WeatherForecast`, {
+      cache: "no-store",
+    });
+
+    if (!res.ok) {
+      throw new Error(`Request failed with status ${res.status}`);
+    }
+
+    return (await res.json()) as {
+      date: string;
+      temperatureC: number;
+      summary?: string;
+    }[];
+  } catch {
+    return [];
+  }
+}
+
+export default async function Home() {
+  const forecasts = await getWeather();
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="flex min-h-screen flex-col items-center justify-start bg-background p-8 text-foreground">
+      <div className="w-full max-w-2xl space-y-4">
+        <header className="flex items-center justify-between">
+          <div>
+            <h1 className="text-2xl font-semibold tracking-tight">Clean Architecture Monorepo</h1>
+            <p className="text-sm text-muted-foreground">Sample data from .NET backend (WeatherForecast).</p>
+          </div>
+          <Button variant="outline" size="sm" asChild>
+            <Link href="/">Refresh</Link>
+          </Button>
+        </header>
+
+        <Card>
+          <CardHeader>
+            <CardTitle>Forecast</CardTitle>
+          </CardHeader>
+          <CardContent>
+            {forecasts.length === 0 ? (
+              <p className="text-sm text-muted-foreground">No data (is the API running?).</p>
+            ) : (
+              <ul className="space-y-1 text-sm">
+                {forecasts.map((f, idx) => (
+                  <li key={idx} className="flex items-center justify-between">
+                    <span className="font-medium">{f.date}</span>
+                    <span>
+                      {f.temperatureC} °C{f.summary ? ` · ${f.summary}` : ""}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </CardContent>
+        </Card>
+      </div>
+    </main>
   );
 }
