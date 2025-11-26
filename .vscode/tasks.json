@@ -1,0 +1,67 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "backend: run api",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "run",
+        "--project",
+        "backend/src/Services/CleanArchWeb.Api/CleanArchWeb.Api.csproj"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "frontend: dev",
+      "type": "shell",
+      "command": "npm",
+      "args": ["run", "dev"],
+      "options": {
+        "cwd": "${workspaceFolder}/frontend",
+        "env": {
+          "NEXT_PUBLIC_API_BASE_URL": "http://localhost:5277"
+        }
+      },
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "publish: api to iis",
+      "type": "shell",
+      "command": "pwsh",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/scripts/publish-iis.ps1",
+        "-ProjectPath",
+        "backend/src/Services/CleanArchWeb.Api/CleanArchWeb.Api.csproj",
+        "-ProfileName",
+        "${input:publishProfileName}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "dev: all",
+      "dependsOn": ["backend: run api", "frontend: dev"],
+      "dependsOrder": "parallel"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "publishProfileName",
+      "type": "promptString",
+      "description": "Publish profile name (without .pubxml)",
+      "default": "IIS-WebDeploy"
+    }
+  ]
+}

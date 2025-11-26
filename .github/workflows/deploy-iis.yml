@@ -1,0 +1,72 @@
+name: CI - Build, Test, Deploy to IIS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "backend/**"
+      - ".github/workflows/deploy-iis.yml"
+  workflow_dispatch:
+    inputs:
+      publishProfileName:
+        description: "Publish profile name (without .pubxml) located under Properties/PublishProfiles"
+        required: false
+        default: "IIS-WebDeploy"
+
+concurrency:
+  group: iis-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test-deploy:
+    runs-on: windows-latest
+    env:
+      PROJECT_PATH: backend\src\Services\CleanArchWeb.Api\CleanArchWeb.Api.csproj
+      PUBLISH_PROFILE_NAME: ${{ inputs.publishProfileName || 'IIS-WebDeploy' }}
+      PROFILE_PATH: backend\src\Services\CleanArchWeb.Api\Properties\PublishProfiles\${{ inputs.publishProfileName || 'IIS-WebDeploy' }}.pubxml
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "10.x"
+
+      - name: Setup MSBuild (for Web Deploy)
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Verify publish profile exists
+        shell: pwsh
+        run: |
+          if (!(Test-Path "$env:PROFILE_PATH")) {
+            Write-Error "Publish profile not found at $env:PROFILE_PATH. Add a Web Deploy .pubxml or override input 'publishProfileName'."
+          }
+
+      - name: Restore
+        shell: pwsh
+        run: dotnet restore "$env:PROJECT_PATH"
+
+      - name: Build
+        shell: pwsh
+        run: dotnet build "$env:PROJECT_PATH" -c Release --no-restore
+
+      - name: Test (all backend projects)
+        shell: pwsh
+        run: dotnet test backend --configuration Release --no-build --nologo
+
+      - name: Deploy to IIS using Publish Profile (Web Deploy)
+        shell: pwsh
+        env:
+          IIS_PUBLISH_USER: ${{ secrets.IIS_PUBLISH_USER }}
+          IIS_PUBLISH_PASSWORD: ${{ secrets.IIS_PUBLISH_PASSWORD }}
+        run: |
+          $props = @(
+            "/p:Configuration=Release",
+            "/p:DeployOnBuild=true",
+            "/p:PublishProfile=$env:PUBLISH_PROFILE_NAME",
+            "/p:AllowUntrustedCertificate=True"
+          )
+          if ($env:IIS_PUBLISH_USER) { $props += "/p:UserName=$env:IIS_PUBLISH_USER" }
+          if ($env:IIS_PUBLISH_PASSWORD) { $props += "/p:Password=$env:IIS_PUBLISH_PASSWORD" }
+          msbuild "$env:PROJECT_PATH" $props

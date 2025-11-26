@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchWeb.Application\CleanArchWeb.Application.csproj" />
+    <ProjectReference Include="..\CleanArchWeb.Infrastructure\CleanArchWeb.Infrastructure.csproj" />
+    <ProjectReference Include="..\CleanArchWeb.Domain\CleanArchWeb.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

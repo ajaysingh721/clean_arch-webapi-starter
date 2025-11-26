@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "3dCUygt1Wtk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ajayi\\source\\repos\\clean_arch-webapi-starter\\backend\\src\\Services\\CleanArchWeb.Api\\CleanArchWeb.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ajayi\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.0\\microsoft.aspnetcore.openapi.10.0.0.nupkg.sha512",
+    "C:\\Users\\ajayi\\.nuget\\packages\\microsoft.extensions.apidescription.server\\10.0.0\\microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
+    "C:\\Users\\ajayi\\.nuget\\packages\\microsoft.openapi\\2.3.0\\microsoft.openapi.2.3.0.nupkg.sha512",
+    "C:\\Users\\ajayi\\.nuget\\packages\\swashbuckle.aspnetcore\\10.0.1\\swashbuckle.aspnetcore.10.0.1.nupkg.sha512",
+    "C:\\Users\\ajayi\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\10.0.1\\swashbuckle.aspnetcore.swagger.10.0.1.nupkg.sha512",
+    "C:\\Users\\ajayi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.0.1\\swashbuckle.aspnetcore.swaggergen.10.0.1.nupkg.sha512",
+    "C:\\Users\\ajayi\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\10.0.1\\swashbuckle.aspnetcore.swaggerui.10.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,15 @@
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\bin\Release\net10.0\CleanArchWeb.Application.deps.json
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\bin\Release\net10.0\CleanArchWeb.Application.dll
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\bin\Release\net10.0\CleanArchWeb.Application.pdb
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\bin\Release\net10.0\CleanArchWeb.Domain.dll
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\bin\Release\net10.0\CleanArchWeb.Domain.pdb
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\obj\Release\net10.0\CleanArchWeb.Application.csproj.AssemblyReference.cache
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\obj\Release\net10.0\CleanArchWeb.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\obj\Release\net10.0\CleanArchWeb.Application.AssemblyInfoInputs.cache
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\obj\Release\net10.0\CleanArchWeb.Application.AssemblyInfo.cs
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\obj\Release\net10.0\CleanArchWeb.Application.csproj.CoreCompileInputs.cache
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\obj\Release\net10.0\CleanArc.D18CD632.Up2Date
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\obj\Release\net10.0\CleanArchWeb.Application.dll
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\obj\Release\net10.0\refint\CleanArchWeb.Application.dll
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\obj\Release\net10.0\CleanArchWeb.Application.pdb
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Application\obj\Release\net10.0\ref\CleanArchWeb.Application.dll

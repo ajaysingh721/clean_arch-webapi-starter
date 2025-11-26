@@ -1,0 +1,11 @@
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Domain\bin\Debug\net10.0\CleanArchWeb.Domain.deps.json
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Domain\bin\Debug\net10.0\CleanArchWeb.Domain.dll
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Domain\bin\Debug\net10.0\CleanArchWeb.Domain.pdb
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Domain\obj\Debug\net10.0\CleanArchWeb.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Domain\obj\Debug\net10.0\CleanArchWeb.Domain.AssemblyInfoInputs.cache
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Domain\obj\Debug\net10.0\CleanArchWeb.Domain.AssemblyInfo.cs
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Domain\obj\Debug\net10.0\CleanArchWeb.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Domain\obj\Debug\net10.0\CleanArchWeb.Domain.dll
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Domain\obj\Debug\net10.0\refint\CleanArchWeb.Domain.dll
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Domain\obj\Debug\net10.0\CleanArchWeb.Domain.pdb
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Domain\obj\Debug\net10.0\ref\CleanArchWeb.Domain.dll

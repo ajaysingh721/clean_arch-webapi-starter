@@ -1,0 +1,17 @@
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\obj\Debug\net10.0\CleanArchWeb.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\obj\Debug\net10.0\CleanArchWeb.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\obj\Debug\net10.0\CleanArchWeb.Infrastructure.AssemblyInfo.cs
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\obj\Debug\net10.0\CleanArchWeb.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\bin\Debug\net10.0\CleanArchWeb.Infrastructure.deps.json
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\bin\Debug\net10.0\CleanArchWeb.Infrastructure.dll
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\bin\Debug\net10.0\CleanArchWeb.Infrastructure.pdb
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\bin\Debug\net10.0\CleanArchWeb.Application.dll
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\bin\Debug\net10.0\CleanArchWeb.Domain.dll
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\bin\Debug\net10.0\CleanArchWeb.Application.pdb
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\bin\Debug\net10.0\CleanArchWeb.Domain.pdb
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\obj\Debug\net10.0\CleanArchWeb.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\obj\Debug\net10.0\CleanArc.572CABD0.Up2Date
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\obj\Debug\net10.0\CleanArchWeb.Infrastructure.dll
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\obj\Debug\net10.0\refint\CleanArchWeb.Infrastructure.dll
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\obj\Debug\net10.0\CleanArchWeb.Infrastructure.pdb
+C:\Users\ajayi\source\repos\clean_arch-webapi-starter\backend\src\Services\CleanArchWeb.Infrastructure\obj\Debug\net10.0\ref\CleanArchWeb.Infrastructure.dll
