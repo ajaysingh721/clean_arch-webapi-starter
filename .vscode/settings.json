@@ -1,0 +1,7 @@
+{
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Always include a list of key changes. explain what was modified, why, and where (files, functions, modules), use meaningful icons to highlight the nature of each change"
+    }
+  ]
+}
