@@ -48,6 +48,7 @@ app.UseCors();
 
 // Register API endpoints via modules for maintainability
 app.MapWeatherForecastEndpoints();
+app.MapChatEndpoints();
 
 app.Run();
 

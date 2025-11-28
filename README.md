@@ -47,7 +47,10 @@ clean_arch-webapi-starter/
   - `CleanArchWeb.Infrastructure` – infrastructure implementations (`/backend/src/Services/CleanArchWeb.Infrastructure`)
   - `AppHost` – simple console-based host placeholder (`/backend/src/AppHost`)
 
-Sample endpoint: `GET /api/WeatherForecast`
+Sample endpoints:
+
+- `GET /api/WeatherForecast` – demo data piped into the frontend home page
+- `POST /api/chat/completions` – mock LLM that keeps multi-turn history and returns usage metadata
 
 To run the API:
 
@@ -59,7 +62,7 @@ dotnet run --project .\src\Services\CleanArchWeb.Api\CleanArchWeb.Api.csproj
 ## Frontend
 
 - App: `frontend/` (Next.js, TypeScript, App Router)
-- Home page (`src/app/page.tsx`) fetches data from the backend `WeatherForecast` endpoint using `NEXT_PUBLIC_API_BASE_URL`.
+- Home page (`app/page.tsx`) now advertises the chatbot playground backed by `/api/chat/completions`. Launch it via the floating button in the bottom-right corner to stream assistant responses, retry turns, and inspect mock token usage just like a production LLM UX.
 
 To run the frontend dev server:
 
@@ -68,6 +71,13 @@ cd ./frontend
 $env:NEXT_PUBLIC_API_BASE_URL="http://localhost:5277"
 npm run dev
 ```
+
+### Chatbot workflow
+
+1. Start the API (`dotnet run --project backend/src/Services/CleanArchWeb.Api/CleanArchWeb.Api.csproj`) and the Next.js dev server (or use the `dev: all` VS Code task).
+2. Visit `http://localhost:3000` and enter a prompt in the chat textarea.
+3. Use the "Chat with Copilot" launcher fixed to the bottom-right corner to open the panel. The frontend posts to `/api/chat/completions`, streams the reply, and shows mock token usage. Use **Retry last** to regenerate the final turn or **Clear chat** to reset.
+4. The backend caps context to twenty turns and produces deterministic output so tests and demos are reproducible.
 
 ## Run Both (VS Code Tasks)
 
